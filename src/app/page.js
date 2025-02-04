@@ -43,7 +43,6 @@ const getProperties = async () => {
 
 const Home = async () => {
   const properties = await getProperties();
-  console.log(properties);
 
   return (
     <>
