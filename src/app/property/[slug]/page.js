@@ -63,7 +63,8 @@ const Property = async ({ params }) => {
                         height={550}
                     />
                 ))};
-                <div className="property-info-container">
+            </div>
+            <div className="property-info-container">
                     <h1>{property.name}</h1>
                     <h2>
                         <span>{property.beds} Beds</span>
@@ -90,7 +91,6 @@ const Property = async ({ params }) => {
                         <button>Go back</button>
                     </Link>
                 </div>
-            </div>
         </div>
     )
 }
