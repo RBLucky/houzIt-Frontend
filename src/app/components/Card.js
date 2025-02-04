@@ -11,7 +11,12 @@ const Card = ({
     return (
         <Link href={`/property/${slug}`}>
             <div className="card">
-                <ImageCard/>
+                <ImageCard
+                    url={image.url}
+                    fileName={image.fileName}
+                    width={300}
+                    height={150}
+                />
                 <div className="text-container">
                     <h3>R{rentalPrice} / month</h3>
                     <h3>{beds} Beds</h3>
