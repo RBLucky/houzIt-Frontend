@@ -75,8 +75,8 @@ const Map = ({ locations }) => {
       if (!mapRef.current || !window.google || !locations.length) return;
 
       const center = {
-        lat: locations[0].latitude,
-        lng: locations[0].longitude,
+        lat: locations[0]?.latitude,
+        lng: locations[0]?.longitude,
       };
 
       // Initialize the map
