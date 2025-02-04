@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar";
 import SearchBar from "./components/SearchBar";
 import Map from "./components/Map";
 import Card from "./components/Card";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const getProperties = async () => {
   const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT;
@@ -43,6 +44,7 @@ const getProperties = async () => {
 
 const Home = async () => {
   const properties = await getProperties();
+  const locations = properties.map(property => property.location)
 
   return (
     <>
@@ -50,7 +52,9 @@ const Home = async () => {
       <SearchBar />
       <main>
         <article>
-          <Map />
+          <ErrorBoundary>
+            <Map locations={locations} />
+          </ErrorBoundary>
         </article>
         <article className="listings">
           <h2>Rental Listings</h2>
