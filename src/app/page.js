@@ -16,7 +16,7 @@ const getProperties = async () => {
     },
     body: JSON.stringify({
       query: `
-        query MyQuery {
+        query PropertiesQuery {
           properties {
             beds
             description
@@ -36,9 +36,15 @@ const getProperties = async () => {
         }`,
     }),
   });
+
+  const json = await response.json();
+  return json.data.properties;
 };
 
-const Home = () => {
+const Home = async () => {
+  const properties = await getProperties();
+  console.log(properties);
+
   return (
     <>
       <NavBar />
