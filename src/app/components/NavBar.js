@@ -1,6 +1,8 @@
 const NavBar = () => {
     return (
-        <>Navbar</>
+        <nav>
+            {/* houz'It logo*/}
+        </nav>
     );
 }
 

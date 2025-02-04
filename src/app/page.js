@@ -1,9 +1,15 @@
 import NavBar from "./components/NavBar"
+import SearchBar from "./components/SearchBar";
 
 const Home = () => {
   return (
     <>
-      <NavBar/> 
+      <NavBar/>
+      <SearchBar/>
+      <main>
+        <article></article>
+        <article className="listings"></article>
+      </main>
     </>
   );
 }
