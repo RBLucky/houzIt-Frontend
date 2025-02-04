@@ -56,7 +56,14 @@ const Home = async () => {
         <article className="listings">
           <h2>Rental Listings</h2>
           <div className="card-container">
-            <Card />
+            {properties.map(property => <Card
+              key={property.id}
+              propertyName={property.name}
+              slug={property.slug}
+              rentalPrice={property.rentalPrice}
+              beds={property.beds}
+              image={property.images[0]}
+            />)}
           </div>
         </article>
       </main>

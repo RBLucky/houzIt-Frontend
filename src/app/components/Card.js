@@ -1,6 +1,16 @@
-const Card = () => {
+import Link from "next/link";
+
+const Card = ({
+    propertyName,
+    slug,
+    rentalPrice,
+    beds,
+    image
+}) => {
     return (
-        <></>
+        <Link href={`/property/${slug}`}>
+            <div>{propertyName}</div>
+        </Link>
     );
 }
 
