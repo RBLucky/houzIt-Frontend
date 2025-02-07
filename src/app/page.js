@@ -1,7 +1,11 @@
 import NavBar from "./components/NavBar";
 import Grid from "./components/Grid";
 
+
+// Retrieve properties from DB
 const getProperties = async () => {
+
+  // Connect to DB
   const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT;
   if (!HYGRAPH_ENDPOINT) {
     throw new Error("HYGRAPH_ENDPOINT is not set");
