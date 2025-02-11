@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "houzIt",
-  description: "A place to find home",
+  title: "Project Example",
+  description: "A place to find home | Something's cooking...",
 };
 
 const RootLayout = ({ children }) => {
